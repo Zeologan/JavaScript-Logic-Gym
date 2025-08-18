@@ -10,7 +10,7 @@
 // }
 // greatestCommon(20,20);
 
-// better approach 
+// better approach GCD
 function greatestCommon(a,b){
     while(b!==0){
         temp = b;
