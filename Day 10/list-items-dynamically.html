@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create list items dynamically</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Create list items dynamically</h2>
+    <ul id="list" style="text-align: center; list-style: none;"></ul>
+    <script>
+        const listItem = ['Rohit', 'Karan', 'Sahil', 'Unknown'];
+        const list = document.getElementById('list');
+        for(let i of listItem){
+            const li = document.createElement('li');
+            li.textContent = i;
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>
