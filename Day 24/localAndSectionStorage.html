@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Hello World</h2>
+    <input type="text" id="user" placeholder="Username">
+    <button onclick="addUser()">submit</button>
+
+    <p id="displayText"></p>
+    <script>
+        // LocalStorage 
+        function addUser() {
+            const username = document.getElementById('user').value
+            localStorage.setItem("user", username);
+            document.getElementById('displayText').textContent = `Welcome back,${localStorage.getItem("user")}`
+            setTimeout(() => {
+                // localStorage.clear()
+            }, 3000);
+        }
+
+        // SessionStorage 
+        // function addUser() {
+        //     const username = document.getElementById('user').value
+        //     sessionStorage.setItem("user", username);
+        //     document.getElementById('displayText').textContent = `Welcome back,${sessionStorage.getItem("user")}`
+        //     setTimeout(() => {
+        //         // sessionStorage.clear()
+        //     }, 3000);
+        // }
+    </script>
+</body>
+
+</html>
